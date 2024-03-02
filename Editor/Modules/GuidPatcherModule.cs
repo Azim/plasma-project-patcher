@@ -549,7 +549,7 @@ namespace Nomnom.LCProjectPatcher.Modules {
             
             EditorUtility.ClearProgressBar();
         }
-        
+        /*
         public static void CreateES3DefaultsScript(LCPatcherSettings settings) {
             // ? this one is in Resources so it doesn't get picked up automatically for some reason
             var es3DefaultsFormat = Resources.Load<TextAsset>("WrapperScriptTemplate").text;
@@ -571,6 +571,7 @@ namespace Nomnom.LCProjectPatcher.Modules {
             
             File.WriteAllText(Path.Combine(es3DefaultsPath, "ES3Defaults.cs"), es3DefaultsFormat);
         }
+        */
 
         public static void FixGuidsWithPatcherList(ExtractProjectInformationUtility.ExtractedResults extractedResults) {
             _monoList.Clear();
@@ -599,7 +600,7 @@ namespace Nomnom.LCProjectPatcher.Modules {
             _monoList.Clear();
             _scriptableObjectList.Clear();
             
-            AssetDatabase.Refresh();
+            AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
         }
         
         public static void FixGuidsForScriptableObject(string originalGuid, string newGuid, string fileId, int type, string fullTypeName) {
@@ -611,7 +612,7 @@ namespace Nomnom.LCProjectPatcher.Modules {
             var assetRipperPath = ModuleUtility.ProjectDirectory;
             FixGuids(assetRipperPath, debugMode: false);
             _scriptableObjectList.Clear();
-            AssetDatabase.Refresh();
+            AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
         }
 
         private static Dictionary<string, (string guid, string foundNamespace)> GetAllProjectMetaData(LCPatcherSettings settings) {

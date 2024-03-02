@@ -6,21 +6,40 @@ using UnityEngine;
 namespace Nomnom.LCProjectPatcher.Editor.Modules {
     public static class SteamGameModule {
         private readonly static string[] DllsToCopy = new[] {
-            "AmazingAssets.TerrainToMesh.dll",
-            "ClientNetworkTransform.dll",
-            "DissonanceVoip.dll",
-            "Facepunch Transport for Netcode for GameObjects.dll",
-            "Facepunch.Steamworks.Win64.dll",
-            "Newtonsoft.Json.dll",
-            // "Assembly-CSharp.dll", // experimental
+            "AIToASE.dll",
+            "AmplifyImpostors.dll",
+            "com.rlabrecque.steamworks.net.dll",
+            "mcs.dll",
+            "DemiLib.dll",
+            "DOTween.dll",
+            "DOTweenPro.dll",
+            "FMODUnity.dll",
+            "FMODUnityResonance.dll",
+            "GlitchLibraryAssembly.dll",
+            "jianglong.library.gif-player.dll",
+            "PlasmaLibrary.dll",
+            "QFSW.QC.dll",
+            "QFSW.QC.Extras.dll",
+            "QFSW.QC.Grammar.dll",
+            "QFSW.QC.Parsers.dll",
+            "QFSW.QC.ScanRules.dll",
+            "QFSW.QC.Serializers.dll",
+            "QFSW.QC.Suggestors.dll",
+            "QFSW.QC.UI.dll",
+            "Rewired_Core.dll",
+            "Rewired_Windows.dll",
+            "Sirenix.OdinInspector.Attributes.dll",
+            "Sirenix.Serialization.Config.dll",
+            "Sirenix.Serialization.dll",
+            "Sirenix.Utilities.dll",
             "Assembly-CSharp-firstpass.dll",
         };
         
         private readonly static string[] SpecialDllsToCopy = new[] {
-            "AudioPluginDissonance.dll",
-            "discord_game_sdk.dll",
-            "opus.dll",
-            "phonon_fmod.dll",
+            "fmodstudio.dll",
+            "PlasmaNativeCore.dll",
+            "resonanceaudio.dll",
+            "Rewired_DirectInput.dll",
             // "steam_api64.dll",
         };
         

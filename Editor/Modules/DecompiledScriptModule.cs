@@ -38,7 +38,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
                 //     }
                 // }
 
-                var hasDunGen = AssetRipperModule.HasDunGenAsset;
+                //var hasDunGen = AssetRipperModule.HasDunGenAsset;
                 EditorUtility.DisplayProgressBar("Cloning scripts", "Cloning scripts", 0.8f);
                 for (var i = 0; i < scriptFiles.Length; i++) {
                     var file = scriptFiles[i];
@@ -47,11 +47,13 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
                         continue;
                     }
                     
+                    /*
                     if (hasDunGen && file.Contains("DunGen")) {
                         Debug.LogWarning($"- Skipping {file}");
                         continue;
                     }
-                    
+                    */
+
                     EditorUtility.DisplayProgressBar("Cloning scripts", $"Cloning {file}", (float)i / scriptFiles.Length);
                     var relativePath = file.Replace(Path.Combine(assetRipperPath, "Assets", "Scripts"), projectScriptsFolder);
                     Debug.Log($"Creating {relativePath} at {Path.GetDirectoryName(relativePath)}");

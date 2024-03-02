@@ -34,7 +34,7 @@ namespace Nomnom.LCProjectPatcher.Editor {
             ModuleUtility.CreateDirectory(settings.GetModsPath(fullPath: true));
             ModuleUtility.CreateDirectory(settings.GetToolsPath(fullPath: true));
             
-            AssetDatabase.Refresh();
+            AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
             
             _instance = this;
             rootVisualElement.styleSheets.Add(Resources.Load<StyleSheet>("MissingScriptValidator_Styles"));
@@ -239,11 +239,13 @@ namespace Nomnom.LCProjectPatcher.Editor {
             }) {
                 text = "Debug monoscripts"
             });
+            /*
             foldout.Add(new Button(() => {
                 AssetRipperModule.RemoveDunGenFromOutputIfNeeded(ModuleUtility.GetPatcherSettings());
             }) {
                 text = "Test DunGen path"
             });
+            */
             foldout.Add(new Button(() => {
                 AssetRipperModule.RunAssetRipper(ModuleUtility.GetPatcherSettings()).Forget();
             }) {

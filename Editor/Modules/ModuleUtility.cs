@@ -153,7 +153,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
                 var asset = ScriptableObject.CreateInstance<LCPatcherRuntimeSettings>();
                 AssetDatabase.CreateAsset(asset, "Assets/LCPatcherRuntimeSettings.asset");
                 AssetDatabase.SaveAssets();
-                AssetDatabase.Refresh();
+                AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
                 return asset;
             }
 

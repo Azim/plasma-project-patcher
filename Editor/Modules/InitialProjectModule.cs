@@ -31,7 +31,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
             }
             
             AssetDatabase.StopAssetEditing();
-            AssetDatabase.Refresh();
+            AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
             AssetDatabase.StartAssetEditing();
             
             // var unityDirectory = settings.GetBaseUnityPath();

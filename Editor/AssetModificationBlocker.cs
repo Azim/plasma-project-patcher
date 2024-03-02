@@ -84,7 +84,7 @@ namespace Nomnom.LCProjectPatcher.Editor {
                     //     AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
                     // }
                     // AssetDatabase.StopAssetEditing();
-                    AssetDatabase.Refresh();
+                    AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
                 } catch (Exception e) {
                     Debug.LogError(e);
                 }

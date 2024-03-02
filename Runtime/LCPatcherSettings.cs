@@ -13,7 +13,7 @@ namespace Nomnom.LCProjectPatcher {
         [SerializeField] private string _baseUnityPath = "Unity";
         
         [SerializedPath(nameof(GetBasePath))]
-        [SerializeField] private string _baseLethalCompanyPath = "LethalCompany";
+        [SerializeField] private string _baseLethalCompanyPath = "Plasma";
         [SerializeField] private AssetRipperSettings _assetRipperSettings;
         [SerializeField] private GeneralSettings _generalSettings;
 

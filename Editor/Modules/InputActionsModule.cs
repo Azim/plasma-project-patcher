@@ -127,7 +127,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
                 var newPath = Path.Combine(Path.GetDirectoryName(realPath), $"{Path.GetFileNameWithoutExtension(realPath)}.inputactions");
                 File.WriteAllText(newPath, json);
                 
-                AssetDatabase.Refresh();
+                AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
 
                 var localNewPath = Path.GetRelativePath(Path.Combine(Application.dataPath, ".."), newPath);
                 var newGuid = AssetDatabase.AssetPathToGUID(localNewPath);

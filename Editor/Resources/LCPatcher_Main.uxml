@@ -63,7 +63,7 @@
             </ui:VisualElement>
         </ui:Foldout>
         <ui:Foldout text="Debug" name="debug" value="false" style="flex-grow: 1; flex-shrink: 0; display: none;">
-            <ui:Button text="Validate DunGen Path" parse-escape-sequences="true" display-tooltip-when-elided="true" />
+            <!--<ui:Button text="Validate DunGen Path" parse-escape-sequences="true" display-tooltip-when-elided="true" />-->
             <ui:VisualElement style="flex-direction: row;">
                 <ui:Button text="Sort ScriptableObjects" parse-escape-sequences="true" display-tooltip-when-elided="true" style="flex-grow: 1; width: 45%;" />
                 <ui:Button text="Unsort ScriptableObjects" parse-escape-sequences="true" display-tooltip-when-elided="true" style="flex-grow: 1; width: 45%;" />

@@ -129,7 +129,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
                 throw;
             }
         }
-
+        /*
         public static bool HasDunGenAsset {
             get {
                 var settings = ModuleUtility.GetPatcherSettings();
@@ -138,7 +138,6 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
                 return Directory.Exists(assetDunGenPath);
             }
         }
-
         public static void RemoveDunGenFromOutputIfNeeded(LCPatcherSettings settings) {
             // ? check if we have DunGen in the project already
             var nativePath = settings.GetAssetStorePath(fullPath: true);
@@ -176,7 +175,8 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
             AssetDatabase.ImportPackage(packagepath, false);
             EditorUtility.ClearProgressBar();
         }
-        
+        */
+
         public static void CopyAssetRipperContents(LCPatcherSettings settings) {
             var assetRipperSettings = settings.AssetRipperSettings;
             var outputRootFolder = settings.GetLethalCompanyGamePath();

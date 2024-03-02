@@ -106,7 +106,7 @@ namespace Nomnom.LCProjectPatcher.Editor {
                 }
 
                 AssetDatabase.SaveAssets();
-                AssetDatabase.Refresh();
+                AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
 
                 Debug.Log($"Created submesh folder for {mesh.name} @ {folderPath}");
                 meshPaths.Add(mesh, (folderPath, meshName));
@@ -148,7 +148,7 @@ namespace Nomnom.LCProjectPatcher.Editor {
                     var meshColliderMeshPath = AssetDatabase.GetAssetPath(meshCollider.sharedMesh);
                     AssetDatabase.RenameAsset(meshColliderMeshPath, meshCollider.gameObject.name);
                     AssetDatabase.SaveAssets();
-                    AssetDatabase.Refresh();
+                    AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
 
                     meshFilter.sharedMesh = meshCollider.sharedMesh;
                     Debug.Log($"Found mesh \"{mesh.name}\" at {meshCollider} in scene {scenePath}");
@@ -178,7 +178,7 @@ namespace Nomnom.LCProjectPatcher.Editor {
                 AssetDatabase.CreateAsset(subMesh, assetPath);
 
                 AssetDatabase.SaveAssets();
-                AssetDatabase.Refresh();
+                AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
 
                 var meshAsset = AssetDatabase.LoadAssetAtPath<Mesh>(assetPath);
                 meshFilter.sharedMesh = meshAsset;

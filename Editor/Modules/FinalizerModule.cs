@@ -48,7 +48,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
             }
             EditorSceneManager.OpenScene(initScene.path);
         }
-
+        /*
         public static void PatchES3DefaultsScriptableObject(LCPatcherSettings settings) {
             var gamePath = settings.GetLethalCompanyGamePath(fullPath: true);
             string resources;
@@ -79,6 +79,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
             text = GuidPatcherModule.GuidPattern.Replace(text, $"guid: {guidString}");
             File.WriteAllText(es3DefaultsResourcesPath, text);
         }
+        */
 
         public static void PatchHDRPVolumeProfile(LCPatcherSettings settings) {
             var settingsPath = settings.GetNativePath();
@@ -195,7 +196,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
             }
             
             GraphicsSettings.renderPipelineAsset = renderPipelineAsset;
-            AssetDatabase.Refresh();
+            AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
             
             var assetPath = AssetDatabase.GetAssetPath(renderPipelineAsset);
             Debug.Log($"Set RenderPipelineAsset to one found at \"{assetPath}\"");
