@@ -16,7 +16,7 @@ using Nomnom.LCProjectPatcher.Editor.Modules;
 using Patches;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Rendering.HighDefinition;
+//using UnityEngine.Rendering.HighDefinition;
 using UnityEngine.SceneManagement;
 using Debug = UnityEngine.Debug;
 
@@ -26,7 +26,7 @@ public class BepInExPatcher: MonoBehaviour {
     private static string CustomBepInExLocation => ModuleUtility.GetPatcherRuntimeSettings().CustomBepInExLocation;
     private static bool LoadProjectPlugins => ModuleUtility.GetPatcherRuntimeSettings().LoadProjectPlugins;
     
-    private static CustomPassVolume _posterizationVolume;
+    //private static CustomPassVolume _posterizationVolume;
     private static List<Assembly> _assemblies = new();
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
@@ -241,13 +241,13 @@ public class BepInExPatcher: MonoBehaviour {
         obj.AddComponent<BepInExPatcher>();
         DontDestroyOnLoad(obj);
         
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-        SceneManager.sceneUnloaded -= OnSceneUnloaded;
+        //SceneManager.sceneLoaded -= OnSceneLoaded;
+        //SceneManager.sceneUnloaded -= OnSceneUnloaded;
         
-        if (LoadPosterizationShader) {
-            SceneManager.sceneLoaded += OnSceneLoaded;
-            SceneManager.sceneUnloaded += OnSceneUnloaded;
-        }
+        //if (LoadPosterizationShader) {
+        //    SceneManager.sceneLoaded += OnSceneLoaded;
+        //    SceneManager.sceneUnloaded += OnSceneUnloaded;
+        //}
     }
     
     private static Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args) {
@@ -576,7 +576,7 @@ public class BepInExPatcher: MonoBehaviour {
     //         }
     //     }
     // }
-    
+    /*
     private static void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
         // var useExperimentalPosterizationShader = EditorPrefs.GetBool("nomnom.lc_project_patcher.use_experimental_posterization_shader", false);
         if (scene.name == "SampleSceneRelay" && !_posterizationVolume && LoadPosterizationShader) {
@@ -598,6 +598,7 @@ public class BepInExPatcher: MonoBehaviour {
             _posterizationVolume = null;
         }
     }
+    */
 
     public static IEnumerable<(string file, AssemblyDefinition assembly)> GetAllPluginAssemblies(bool onlyMods = false) {
         var settings = ModuleUtility.GetPatcherSettings();

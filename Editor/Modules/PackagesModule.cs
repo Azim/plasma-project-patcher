@@ -10,10 +10,11 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
         public readonly static (string, string)[] Packages = new[] {
             ("com.unity.ai.navigation", "1.1.5"),
             ("com.unity.animation.rigging", "1.2.1"),
-            ("com.unity.collections", "1.2.4"),
+            ("com.unity.collections", "1.3.0"),
             ("com.unity.netcode.gameobjects", "1.5.2"),
             ("com.unity.probuilder", "5.1.1"),
             ("com.unity.inputsystem", "1.7.0"),
+            ("com.unity.postprocessing", "3.2.2"),
         };
 
         public readonly static string[] GitPackages = new[] {

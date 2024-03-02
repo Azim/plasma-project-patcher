@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DefaultLCPatcherSettings
   m_EditorClassIdentifier: 
   _baseUnityPath: Unity
-  _baseLethalCompanyPath: LethalCompany
+  _baseLethalCompanyPath: Plasma
   _assetRipperSettings:
     _baseOutputPath: Game
     _folderMappings:

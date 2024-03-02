@@ -549,7 +549,7 @@ namespace Nomnom.LCProjectPatcher.Modules {
             
             EditorUtility.ClearProgressBar();
         }
-        
+        /*
         public static void CreateES3DefaultsScript(LCPatcherSettings settings) {
             // ? this one is in Resources so it doesn't get picked up automatically for some reason
             var es3DefaultsFormat = Resources.Load<TextAsset>("WrapperScriptTemplate").text;
@@ -570,7 +570,7 @@ namespace Nomnom.LCProjectPatcher.Modules {
                 .Replace("$BASE_CLASS$", "global::ES3Defaults");
             
             File.WriteAllText(Path.Combine(es3DefaultsPath, "ES3Defaults.cs"), es3DefaultsFormat);
-        }
+        }*/
 
         public static void FixGuidsWithPatcherList(ExtractProjectInformationUtility.ExtractedResults extractedResults) {
             _monoList.Clear();

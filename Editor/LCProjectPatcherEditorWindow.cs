@@ -239,11 +239,13 @@ namespace Nomnom.LCProjectPatcher.Editor {
             }) {
                 text = "Debug monoscripts"
             });
+            /*
             foldout.Add(new Button(() => {
                 AssetRipperModule.RemoveDunGenFromOutputIfNeeded(ModuleUtility.GetPatcherSettings());
             }) {
                 text = "Test DunGen path"
-            });
+            });*/
+
             foldout.Add(new Button(() => {
                 AssetRipperModule.RunAssetRipper(ModuleUtility.GetPatcherSettings()).Forget();
             }) {

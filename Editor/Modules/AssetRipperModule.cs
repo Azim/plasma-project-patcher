@@ -130,6 +130,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
             }
         }
 
+        /*
         public static bool HasDunGenAsset {
             get {
                 var settings = ModuleUtility.GetPatcherSettings();
@@ -177,6 +178,8 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
             EditorUtility.ClearProgressBar();
         }
         
+        */
+
         public static void CopyAssetRipperContents(LCPatcherSettings settings) {
             var assetRipperSettings = settings.AssetRipperSettings;
             var outputRootFolder = settings.GetLethalCompanyGamePath();

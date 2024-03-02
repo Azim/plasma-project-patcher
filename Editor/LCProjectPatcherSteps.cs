@@ -106,7 +106,7 @@ namespace Nomnom.LCProjectPatcher.Editor {
                 DecompiledScriptModule.PatchAll(settings, useCopy);
 
                 if (!useCopy) {
-                    GuidPatcherModule.CreateES3DefaultsScript(settings);
+                    //GuidPatcherModule.CreateES3DefaultsScript(settings);
                     
                     // steam files
                     SteamGameModule.CopyManagedDlls(settings);
@@ -159,9 +159,9 @@ namespace Nomnom.LCProjectPatcher.Editor {
 
         public static UniTask RunGuidGroup(LCPatcherSettings settings) {
             GuidPatcherModule.PatchAll(settings);
-            AssetRipperModule.RemoveDunGenFromOutputIfNeeded(settings);
+            //AssetRipperModule.RemoveDunGenFromOutputIfNeeded(settings);
             AssetRipperModule.CopyAssetRipperContents(settings);
-            FinalizerModule.PatchES3DefaultsScriptableObject(settings);
+            //FinalizerModule.PatchES3DefaultsScriptableObject(settings);
             
             SetCurrentStep(4);
             return UniTask.CompletedTask;

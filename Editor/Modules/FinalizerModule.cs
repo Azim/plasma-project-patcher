@@ -9,7 +9,6 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.Pool;
 using UnityEngine.Rendering;
-using UnityEngine.Rendering.HighDefinition;
 using Object = UnityEngine.Object;
 
 namespace Nomnom.LCProjectPatcher.Editor.Modules {
@@ -48,7 +47,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
             }
             EditorSceneManager.OpenScene(initScene.path);
         }
-
+        /*
         public static void PatchES3DefaultsScriptableObject(LCPatcherSettings settings) {
             var gamePath = settings.GetLethalCompanyGamePath(fullPath: true);
             string resources;
@@ -79,6 +78,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
             text = GuidPatcherModule.GuidPattern.Replace(text, $"guid: {guidString}");
             File.WriteAllText(es3DefaultsResourcesPath, text);
         }
+        */
 
         public static void PatchHDRPVolumeProfile(LCPatcherSettings settings) {
             var settingsPath = settings.GetNativePath();
@@ -202,20 +202,7 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
         }
 
         public static void PatchQualityPipelineAsset(LCPatcherSettings settings) {
-            string sos;
-            if (settings.AssetRipperSettings.TryGetMapping("MonoBehaviour", out var finalFolder)) {
-                sos = Path.Combine(settings.GetLethalCompanyGamePath(), finalFolder);
-            } else {
-                sos = Path.Combine(settings.GetLethalCompanyGamePath(), "MonoBehaviour");
-            }
-
-            var pipelineAssetPath = Path.Combine(sos, "HDRenderPipelineAsset.asset");
-            var hdRenderPipelineAsset = AssetDatabase.LoadAssetAtPath<HDRenderPipelineAsset>(pipelineAssetPath);
-            if (!hdRenderPipelineAsset) {
-                Debug.LogError($"Could not find HDRenderPipelineAsset at \"{pipelineAssetPath}\"");
-                return;
-            }
-            QualitySettings.renderPipeline = hdRenderPipelineAsset;
+            
         }
 
         public static void PatchDiageticAudioMixer(LCPatcherSettings settings) {

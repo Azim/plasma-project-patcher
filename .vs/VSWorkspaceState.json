@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Editor",
+    "\\Editor\\Libs",
+    "\\Editor\\Libs\\BepInEx\\Utility",
+    "\\Editor\\Libs\\BepInEx\\Utility\\Patches",
+    "\\Editor\\Libs\\ScriptCleaner~",
+    "\\Editor\\Modules",
+    "\\Editor\\Resources\\Posterization",
+    "\\Runtime",
+    "\\Settings"
+  ],
+  "SelectedNode": "\\Editor\\Modules\\SteamGameModule.cs",
+  "PreviewInSolutionExplorer": false
+}
