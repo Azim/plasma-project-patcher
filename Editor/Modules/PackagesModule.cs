@@ -14,7 +14,8 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
             ("com.unity.netcode.gameobjects", "1.5.2"),
             ("com.unity.probuilder", "5.1.1"),
             ("com.unity.inputsystem", "1.7.0"),
-            //("com.unity.postprocessing", "3.4.0"),
+            ("com.unity.postprocessing", "3.4.0"),
+            //("com.unity.render-pipelines.high-definition", "14.0.7")
         };
 
         public readonly static string[] GitPackages = new[] {
