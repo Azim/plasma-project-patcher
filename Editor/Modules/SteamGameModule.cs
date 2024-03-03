@@ -31,7 +31,10 @@ namespace Nomnom.LCProjectPatcher.Editor.Modules {
             "Sirenix.Serialization.Config.dll",
             "Sirenix.Serialization.dll",
             "Sirenix.Utilities.dll",
-            "Newtonsoft.Json.dll",
+            "Tayx.Graphy.dll",
+            "ZFBrowser.dll",
+            //"Newtonsoft.Json.dll",
+            "mcs.dll",
             // "Assembly-CSharp.dll", // experimental
             "Assembly-CSharp-firstpass.dll",
         };

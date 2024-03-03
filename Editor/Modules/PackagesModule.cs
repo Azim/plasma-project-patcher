@@ -8,13 +8,16 @@ using UnityEngine;
 namespace Nomnom.LCProjectPatcher.Editor.Modules {
     public static class PackagesModule {
         public readonly static (string, string)[] Packages = new[] {
-            ("com.unity.ai.navigation", "1.1.5"),
-            ("com.unity.animation.rigging", "1.2.1"),
-            ("com.unity.collections", "1.3.0"),
-            ("com.unity.netcode.gameobjects", "1.5.2"),
-            ("com.unity.probuilder", "5.1.1"),
-            ("com.unity.inputsystem", "1.7.0"),
+            ("com.unity.2d.sprite", "1.0.0"),
+            ("com.unity.2d.tilemap", "1.0.0"),
+            ("com.unity.ai.navigation", "1.1.3"),
+            ("com.unity.services.analytics", "4.4.0"),
+            ("com.unity.analytics", "3.8.1"),
+            //("com.unity.nuget.newtonsoft-json", "3.2.1"),
+            ("com.unity.polybrush", "1.1.4"),
             ("com.unity.postprocessing", "3.2.2"),
+            ("com.unity.services.core", "1.9.0"),
+            ("com.unity.formats.usd","3.0.0-exp.1"),
         };
 
         public readonly static string[] GitPackages = new[] {
