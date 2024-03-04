@@ -55,7 +55,7 @@ namespace Cysharp.Threading.Tasks
 #endif
     }
 
-    public interface IUniTaskSource<out T> : IUniTaskSource
+    public interface IUniTaskSource<T> : IUniTaskSource
 #if SUPPORT_VALUETASK
         , System.Threading.Tasks.Sources.IValueTaskSource<T>
 #endif
